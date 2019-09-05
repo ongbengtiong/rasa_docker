@@ -1,36 +1,40 @@
 # powershell commands
+
+# change the ${project} to the folder of the project. The project folder should under the root folder of rasa_docker/
+${project} = 'meeting'
+
 docker run `
-  -v /${pwd}:/app/project `
-  -v /${pwd}/models/rasa_core:/app/models `
+  -v ${pwd}/projects/${project}:/app/project `
+  -v ${pwd}/projects/${project}/models/rasa_core:/app/models `
   rasa/rasa_core:latest `
   train `
-    --domain project/domain_meeting.yml `
-    --stories project/data/stories_meeting.md `
+    --domain project/domain.yml `
+    --stories project/data/stories.md `
     --out models
 
 docker run `
-  -v ${pwd}:/app/project `
-  -v ${pwd}/models/rasa_nlu:/app/models `
+  -v ${pwd}/projects/${project}:/app/project `
+  -v ${pwd}/projects/${project}/models/rasa_nlu:/app/models `
   rasa/rasa_nlu:latest-spacy `
   run `
     python -m rasa_nlu.train `
     -c config.yml `
-    -d project/data/nlu_meeting.md `
+    -d project/data/nlu.md `
     -o models `
     --project current
 
 	
 docker run `
   -it `
-  -v ${pwd}/models/rasa_core:/app/models `
+  -v ${pwd}/projects/${project}/models/rasa_core:/app/models `
   rasa/rasa_core:latest `
   start `
     --core models
 	
 
 docker run `
-  -v ${pwd}:/app/project `
-  -v ${pwd}/models/rasa_nlu:/app/models `
+  -v ${pwd}/projects/${project}:/app/project `
+  -v ${pwd}/projects/${project}/models/rasa_nlu:/app/models `
   rasa/rasa_nlu:latest-spacy `
   run `
     python -m rasa_nlu.train `
