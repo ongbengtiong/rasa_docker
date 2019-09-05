@@ -6,8 +6,9 @@ ${project} = 'meeting'
 docker run `
   -v ${pwd}/projects/${project}:/app/project `
   -v ${pwd}/projects/${project}/models/rasa_core:/app/models `
-  rasa/rasa_core:latest `
-  train `
+  rasa/rasa:latest-full `
+  train core `
+  	--config project/config.yml `
     --domain project/domain.yml `
     --stories project/data/stories.md `
     --out models
