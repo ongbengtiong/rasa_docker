@@ -18,6 +18,8 @@ intents:
 - help
 - hobby
 - agent_happy
+- mood_happy
+- mood_unhappy 
 
 entities:
 - name
@@ -47,8 +49,9 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
-- utter_find_room
-
+- utter_happy
+- utter_cheer_up 
+- utter_find_room 
 
 templates:
   utter_name:
@@ -63,5 +66,11 @@ templates:
   utter_thanks:
   - text: "My pleasure."
   
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_cheer_up:
+    - text: "Don't be sad. Keep smiling!"
+
   utter_find_room:
   - text: "Finding you a room"
