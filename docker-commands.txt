@@ -4,14 +4,23 @@
 ${project} = 'meeting'
 
 docker run `
-  -v ${pwd}/projects/${project}:/app/project `
-  -v ${pwd}/projects/${project}/models/rasa_core:/app/models `
+  -v ${pwd}/projects/${project}:/app `
   rasa/rasa:latest-full `
-  train core `
-  	--config project/config.yml `
-    --domain project/domain.yml `
-    --stories project/data/stories.md `
+  train   `
+    --config config.yml `
+    --domain domain.yml `
+    --data data `
     --out models
+
+
+
+docker run `
+  -v ${pwd}/projects/${project}/models:/app/models `
+  -p 5005:5005
+  rasa/rasa:latest-full `
+  run
+
+
 
 docker run `
   -v ${pwd}/projects/${project}:/app/project `
@@ -23,6 +32,7 @@ docker run `
     -d project/data/nlu.md `
     -o models `
     --project current
+
 
 	
 docker run `
