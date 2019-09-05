@@ -34,8 +34,6 @@ slots:
     type: text
   duration:
     type: text
-  duration:
-    type: text
   startDate:
     type: text
   capacity:
@@ -49,6 +47,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - action_joke
+- utter_find_room
 
 
 templates:
