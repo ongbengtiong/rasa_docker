@@ -8,4 +8,7 @@ services:
       - ./:/app
     command:
       - run
-      
+  action_server:
+    image: rasa/rasa-sdk:latest
+    volumes:
+      - ./actions:/app/actions

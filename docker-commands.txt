@@ -16,7 +16,7 @@ docker run `
 
 docker run `
   -v ${pwd}/projects/${project}/models:/app/models `
-  -p 5005:5005
+  -p 5005:5005 `
   rasa/rasa:latest-full `
   run
 
