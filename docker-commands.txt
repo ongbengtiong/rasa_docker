@@ -13,9 +13,18 @@ docker run `
     --out models
 
 
-
 docker run `
-  -v ${pwd}/projects/${project}/models:/app/models `
+  -v ${pwd}/:/app `
+  rasa/rasa:latest-full `
+  train   `
+    --config config.yml `
+    --domain domain.yml `
+    --data data `
+    --out models
+
+	
+docker run `
+  -v ${pwd}/models:/app/models `
   -p 5005:5005 `
   rasa/rasa:latest-full `
   run

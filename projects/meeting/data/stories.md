@@ -33,6 +33,29 @@
  
  
 ## story_find_room
-* find_room
+* find_room{"building": "SP12"} 
  - utter_find_room
- - action_joke
+
+ 
+## happy_path
+* greet
+  - utter_greet
+* mood_happy
+  - utter_happy
+* goodbye
+  - utter_goodbye
+
+## sad_path
+* greet
+  - utter_greet
+* mood_unhappy
+  - utter_cheer_up
+* goodbye
+  - utter_goodbye
+  
+  
+## sad_path_02
+* mood_unhappy
+  - utter_cheer_up
+* goodbye
+  - utter_goodbye

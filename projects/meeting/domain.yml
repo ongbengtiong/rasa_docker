@@ -73,4 +73,5 @@ templates:
     - text: "Don't be sad. Keep smiling!"
 
   utter_find_room:
-  - text: "Finding you a room"
+  - text: "Finding you a room: building:{building} duration:{duration} capacity:{capacity} startDate:{startDate} startTime:{startTime}"
+  - text: "You would like to book a room:  building:{building} duration:{duration} capacity:{capacity} startDate:{startDate} startTime:{startTime}"

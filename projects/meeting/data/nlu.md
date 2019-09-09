@@ -66,6 +66,15 @@
 - find me a room with [3](capacity) seats
 - find me a room in [SP20](building) 
 
+
+
+
+
+
+## intent:joke
+- tell me a joke
+
+
 ## intent:introduction
 - tell me about your personality
 - why are you here

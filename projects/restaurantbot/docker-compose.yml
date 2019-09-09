@@ -12,6 +12,10 @@ services:
       - "http://localhost:4200"
       - --enable-api
       - --debug
+      - --endpoints
+      - endpoints.yml
+      - --credentials
+      - credentials.yml
   action_server:
     image: rasa/rasa-sdk:latest
     volumes:
