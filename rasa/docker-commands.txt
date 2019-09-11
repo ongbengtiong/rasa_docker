@@ -1,18 +1,5 @@
 # powershell commands
 
-# change the ${project} to the folder of the project. The project folder should under the root folder of rasa_docker/
-${project} = 'meeting'
-
-docker run `
-  -v ${pwd}/projects/${project}:/app `
-  --network "host" `
-  rasa/rasa:latest-full `
-  train   `
-    --config config.yml `
-    --domain domain.yml `
-    --data data `
-    --out models
-	
 docker run `
 	-p 8000:8000 `
 	--network "host" `
@@ -22,6 +9,7 @@ docker run `
 	
 docker run `
   -v ${pwd}/:/app `
+  --network "host" `
   rasa/rasa:latest-full `
   train   `
     --config config.yml `
@@ -29,14 +17,9 @@ docker run `
     --data data `
     --out models
 
-	
-docker run `
-  -v ${pwd}/models:/app/models `
-  -p 5005:5005 `
-  rasa/rasa:latest-full `
-  run
 
 
+ 
 
 docker run `
   -v ${pwd}/projects/${project}:/app/project `
