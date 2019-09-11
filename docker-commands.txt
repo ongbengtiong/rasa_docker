@@ -5,14 +5,21 @@ ${project} = 'meeting'
 
 docker run `
   -v ${pwd}/projects/${project}:/app `
+  --network "host" `
   rasa/rasa:latest-full `
   train   `
     --config config.yml `
     --domain domain.yml `
     --data data `
     --out models
-
-
+	
+docker run `
+	-p 8000:8000 `
+	--network "host" `
+	--name duckling `
+	rasa/duckling:latest
+	
+	
 docker run `
   -v ${pwd}/:/app `
   rasa/rasa:latest-full `

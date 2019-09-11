@@ -1,6 +1,18 @@
 language: en
 
-pipeline: supervised_embeddings
+#pipeline: supervised_embeddings
+
+pipeline:
+- name: "WhitespaceTokenizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "CountVectorsFeaturizer"
+- name: "EmbeddingIntentClassifier"
+- name: "DucklingHTTPExtractor"
+  url: "http://duckling:8000"
+  locale: "NL_Nothing"
+  # dimensions to extract
+  dimensions: ["time", "number", "amount-of-money", "distance"]
 
 policies:
   - name: KerasPolicy
@@ -10,3 +22,4 @@ policies:
   - name: FallbackPolicy
   - name: MemoizationPolicy
   - name: MappingPolicy
+    

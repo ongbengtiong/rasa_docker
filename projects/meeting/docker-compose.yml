@@ -16,3 +16,8 @@ services:
     image: rasa/rasa-sdk:latest
     volumes:
       - ./actions:/app/actions
+  duckling:
+    image: rasa/duckling:latest 
+    ports:
+        - "8000:8000"
+ 

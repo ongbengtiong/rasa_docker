@@ -40,6 +40,9 @@ slots:
 templates:
   utter_ask_cuisine:
     - text: "what cuisine?"
+      buttons:
+        - title: "Chinese"
+          payload: '/inform'
   utter_ask_num_people:
     - text: "how many people?"
   utter_ask_outdoor_seating:
