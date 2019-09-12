@@ -6,7 +6,7 @@ docker run `
 	--name duckling `
 	rasa/duckling:latest
 	
-	
+# Training
 docker run `
   -v ${pwd}/:/app `
   --network "host" `
@@ -17,9 +17,36 @@ docker run `
     --data data `
     --out models
 
+# End-to-End Evaluation
+# https://rasa.com/docs/rasa/user-guide/evaluating-models/#id12
+docker run `
+  -v ${pwd}/:/app `
+  --network "host" `
+  rasa/rasa:latest-full `
+  test   `
+    --stories e2e_stories.md `
+    --e2e 
 
+# Evaluating an NLU Model
+# https://rasa.com/docs/rasa/user-guide/evaluating-models/#id4
+docker run `
+  -v ${pwd}/:/app `
+  --network "host" `
+  rasa/rasa:latest-full `
+  test nlu   `
+    -u data/nlu.md  `
+    --config config.yml  `
+    --cross-validation 
 
- 
+# Evaluating a Core Model
+# https://rasa.com/docs/rasa/user-guide/evaluating-models/#id10
+docker run `
+  -v ${pwd}/:/app `
+  --network "host" `
+  rasa/rasa:latest-full `
+  test core    `
+    --stories test_stories.md 
+
 
 docker run `
   -v ${pwd}/projects/${project}:/app/project `
