@@ -1,8 +1,12 @@
 # powershell commands
 
+
+docker network create rasa
+
+
 docker run `
 	-p 8000:8000 `
-	--network "host" `
+	--network "rasa" `
 	--name duckling `
 	rasa/duckling:latest
 	
@@ -47,6 +51,13 @@ docker run `
   test core    `
     --stories test_stories.md 
 
+# Interactive Training
+docker run `
+  -it `
+  --network "rasa" `
+  -v ${pwd}/:/app `
+  rasa/rasa:latest-full  `
+  interactive
 
 docker run `
   -v ${pwd}/projects/${project}:/app/project `

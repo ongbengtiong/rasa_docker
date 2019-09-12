@@ -59,3 +59,64 @@
   - utter_cheer_up
 * goodbye
   - utter_goodbye
+  
+## interactive_story_1
+* find_room{"building": "SP12", "capacity": "5"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - utter_find_room
+
+## interactive_story_1
+* find_room{"building": "SP12", "capacity": "5"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - utter_find_room
+* find_room{"building": "SP12", "capacity": "5", "startTime": "5PM"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - slot{"startTime": "5PM"}
+    - utter_find_room
+* find_room{"building": "SP12", "capacity": "55"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "55"}
+    - utter_find_room
+* find_room{"building": "SP12", "capacity": "5"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - utter_find_room
+
+## interactive_story_1
+* find_room{"building": "SP12", "capacity": "5", "startTime": "3PM"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - slot{"startTime": "3PM"}
+    - utter_find_room
+* find_room{"building": "SP12", "capacity": "5", "startTime": "3PM", "duration": "4 hours"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - slot{"duration": "4 hours"}
+    - slot{"startTime": "3PM"}
+    - utter_find_room
+
+## interactive_story_1
+* find_room{"building": "SP12", "capacity": "5", "startTime": "3PM", "duration": "5 hours"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - slot{"duration": "5 hours"}
+    - slot{"startTime": "3PM"}
+    - utter_find_room
+
+## interactive_story_1
+* find_room{"building": "SP12", "capacity": "5", "startTime": "3PM", "duration": "5 hours", "number": 5, "time": "2019-09-12T15:00:00.000-07:00"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "5"}
+    - slot{"duration": "5 hours"}
+    - slot{"startTime": "3PM"}
+    - utter_find_room
+* find_room{"startDate": "tomorrow"}
+    - slot{"startDate": "tomorrow"}
+    - utter_find_room
+* find_room{"startDate": "today", "startTime": "3PM", "time": "2019-09-12T15:00:00.000-07:00"}
+    - slot{"startDate": "today"}
+    - slot{"startTime": "3PM"}
+    - utter_find_room
