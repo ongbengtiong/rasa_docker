@@ -418,9 +418,12 @@
 - find me a room at [SP12](building) for [5](capacity) people at [3PM](startTime)
 - find me a room at [SP12](building) for [5](capacity) people at [3PM](startTime) for [4 hours](duration)
 - find me a room at [SP12](building) for [5](capacity) people at [3PM](startTime) for [5 hours](duration)
-- find me a room at [SP12](building) for [5](capacity)[5](number:5) people at [3PM](startTime) for [5 hours](duration)[5](number:5) hours
+- find me a room at [SP12](building) for [5](capacity)[5](number) people at [3PM](startTime) for [5 hours](duration)[5](number) hours
 - find me a room [tomorrow](startDate)
 - find me a room [today](startDate) at [3PM](startTime)
+- find me a room in [SP12](building) [tomorrow](startDate) at [4PM](startTime)[4PM ](time:2019-09-12T16:00:00.000-07:00)for [4](capacity) people
+- i need a room in [SP12](building) [tomorrow](startDate) at [4PM](startTime)[4PM ](time:2019-09-12T16:00:00.000-07:00)for [4](capacity) people
+- is there a free room in [SP12](building)[ n](number:12)o[w?](startTime:now)
 
 ## intent:fired
 - you are fired

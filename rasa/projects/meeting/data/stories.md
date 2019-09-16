@@ -120,3 +120,21 @@
     - slot{"startDate": "today"}
     - slot{"startTime": "3PM"}
     - utter_find_room
+
+## interactive_story_1
+* find_room{"building": "SP12", "startDate": "tomorrow", "startTime": "4PM", "capacity": "4", "number": 4, "time": "2019-09-12T16:00:00.000-07:00"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "4"}
+    - slot{"startDate": "tomorrow"}
+    - slot{"startTime": "4PM"}
+    - utter_find_room
+* find_room{"building": "SP12", "startDate": "tomorrow", "startTime": "4PM", "capacity": "4", "number": 4, "time": "2019-09-12T16:00:00.000-07:00"}
+    - slot{"building": "SP12"}
+    - slot{"capacity": "4"}
+    - slot{"startDate": "tomorrow"}
+    - slot{"startTime": "4PM"}
+    - utter_find_room
+* find_room{"building": "SP12", "number": "12", "startTime": "now"}
+    - slot{"building": "SP12"}
+    - slot{"startTime": "now"}
+    - utter_find_room
