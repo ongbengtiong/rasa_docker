@@ -4,6 +4,7 @@
 docker network create rasa
 
 
+# Run Duckloing (run in network 'rasa', which is shared to the rasa docker for training) 
 docker run `
 	-p 8000:8000 `
 	--network "rasa" `
@@ -13,7 +14,7 @@ docker run `
 # Training
 docker run `
   -v ${pwd}/:/app `
-  --network "host" `
+  --network "rasa" `
   rasa/rasa:latest-full `
   train   `
     --config config.yml `

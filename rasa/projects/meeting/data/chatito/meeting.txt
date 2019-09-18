@@ -1,0 +1,39 @@
+import ./common.chatito
+
+%[find_room]('training': '100', 'testing': '100')
+    *[60%] ~[hi?] ~[please?] ~[find?] ~[rooms] ~[located at] @[building] ~[building?] ~[thanks?]
+    *[40%] ~[rooms] ~[located at] @[building]
+
+@[building]
+    ~[SP12]
+    ~[SP14]
+    ~[SP20]
+    ~[KR]
+    ~[MH3]
+    ~[MH4]
+    ~[MH6]
+    ~[MH11]
+
+~[find]
+    find 
+    find me
+    i need
+    i'm looking for
+    help me find
+    i want a
+    is there 
+    can you find me 
+
+~[located at]
+    located at
+    in building 
+    near
+    around
+
+~[rooms]
+    meeting room
+    a room
+    free room
+    free meeting room
+    places to meet
+    room that is free

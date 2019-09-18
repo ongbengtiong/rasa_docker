@@ -17,6 +17,7 @@ entities:
 - number
 - startDate
 - startTime
+- room_number
 intents:
 - find_room
 - greet
@@ -51,6 +52,8 @@ slots:
   startDate:
     type: text
   startTime:
+    type: text
+  room_number:
     type: text
 templates:
   utter_cheer_up:

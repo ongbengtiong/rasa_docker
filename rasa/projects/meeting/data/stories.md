@@ -138,3 +138,7 @@
     - slot{"building": "SP12"}
     - slot{"startTime": "now"}
     - utter_find_room
+
+## interactive_story_1
+* find_room
+    - utter_find_room
